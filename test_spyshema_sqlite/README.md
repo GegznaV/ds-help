@@ -48,7 +48,7 @@ schemaspy.s=dbo
 
 Java is installed.
 
-The files (exept the database) can be found in this repo.
+The files can be found in this repo.
 
 Subfolder `html` should also be created.
 
