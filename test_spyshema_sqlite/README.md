@@ -4,7 +4,10 @@ How to document SQLite database with SchemaSpy?
 I want to create documentation of SQLite database with [ShemaSpy](https://schemaspy.org/). But I cannot figure out, how to use it to get the desired output.
 Could you help me to do this?
 
-The way I tried:
+The way I tried is sescribed below.
+
+Setup
+------
 
 I created a directory "/mnt/d/test" on Windows Subsystem for Linux (WSL) with the following structure:
 
@@ -21,9 +24,9 @@ test
 - `schemaspy-6.1.0.jar` downloaded from [github.com/schemaspy](https://github.com/schemaspy/schemaspy/releases).
 - `sqlite-jdbc-3.40.0.0.jar` downloaded from [github.com/xerial/sqlite-jdbc](https://github.com/xerial/sqlite-jdbc/releases).
 
-<details><summary> Contents of `schemaspy.properties` </summary>
+<details><summary> Contents of <code>schemaspy.properties</code> </summary>
 
-(more about this file on https://schemaspy.readthedocs.io/en/latest/started.html#configuration)
+(More about this file on https://schemaspy.readthedocs.io/en/latest/started.html#configuration)
 
 ```
 # type of database. Run with -dbhelp for details
@@ -39,11 +42,20 @@ schemaspy.o=html/
 schemaspy.s=dbo
 ```
 
-
+---
 
 </details>
 
-Java is installed. I ran the code:
+Java is installed.
+
+The files (exept the database) can be found in this repo.
+
+Subfolder `html` should also be created.
+
+The code that caused the issue
+------------------------------
+
+ I ran the code:
 ```sh
 java -jar schemaspy-6.1.0.jar -t sqlite -db podcast-reviews-database.sqlite -sso -debug
 ```
