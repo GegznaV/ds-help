@@ -109,14 +109,18 @@ INFO  - Starting schema analysis
 DEBUG - Resolving dbType: sqlite ->
         schemaspy-6.1.0.jar!/BOOT-INF/classes!/org/schemaspy/types/sqlite.properties
 ```
+
 </details>
+
 ```
 DEBUG - DbSpecificOption name: 'db' value: 'podcast-reviews-database.sqlite' description: 'path to database or :memory:'
 DEBUG - Unable to find driverClass 'SQLite.JDBCDriver'
 WARN  - Connection Failure
 org.schemaspy.input.dbms.exceptions.ConnectionFailure: Failed to connect to database URL [jdbc:sqlite:/podcast-reviews-database.sqlite] Failed to create any of 'SQLite.JDBCDriver' driver from driverPath 'sqlite-jdbc-3.40.0.0.jar' with sibling jars no.
 ```
+
 <details>
+
 ```
 Resulting in classpath:
         file:/mnt/d/test/sqlite-jdbc-3.40.0.0.jar
@@ -144,6 +148,7 @@ Resulting in classpath:
         at org.schemaspy.input.dbms.DbDriverLoader.getDriver(DbDriverLoader.java:147)
         at org.schemaspy.input.dbms.DbDriverLoader.getConnection(DbDriverLoader.java:93)
 ```
+
 </details>
 
 
@@ -158,6 +163,7 @@ java -jar schemaspy-6.1.0.jar -t sqlite-xerial -db podcast-reviews-database.sqli
 Resulted in:
 
 <details>
+
 ```  ____       _                          ____
  / ___|  ___| |__   ___ _ __ ___   __ _/ ___| _ __  _   _
  \___ \ / __| '_ \ / _ \ '_ ` _ \ / _` \___ \| '_ \| | | |
@@ -187,6 +193,7 @@ DEBUG - supportsCatalogsInTableDefinitions: false
 DEBUG - Catalog not provided, queried jdbc driver and got 'null'
 DEBUG - Command line parameters: [-t, sqlite-xerial, -db, podcast-reviews-database.sqlite, -sso, -debug]
 ```
+
 </details>
 
 ```
@@ -219,6 +226,7 @@ aspy-6.1.0.jar -t sqlite-xerial -db podcast-reviews-database.sqlite -sso -cat %
 resulted in:
 
 <details>
+
 ```
   ____       _                          ____
  / ___|  ___| |__   ___ _ __ ___   __ _/ ___| _ __  _   _
@@ -244,7 +252,9 @@ INFO  - Connected to SQLite - 3.40.0
 INFO  - Gathering schema details
 Gathering schema details...(0sec)
 ```
+
 </details>
+
 ```
 Connecting relationships...WARN  - No tables or views were found in schema 'dbo'.
 ERROR - The schema 'dbo' could not be read/found, schema is specified using the -s option.Make sure user 'null' has the correct privileges to read the schema.Also not that schema names are usually case sensitive.
