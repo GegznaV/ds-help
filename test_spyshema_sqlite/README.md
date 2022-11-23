@@ -71,6 +71,7 @@ driverPath 'sqlite-jdbc-3.40.0.0.jar' with sibling jars no.
 ```
 
 
+---
 
 Details:
 ------------
@@ -151,6 +152,7 @@ Resulting in classpath:
 
 </details>
 
+---
 
 Execution of:
 
@@ -215,6 +217,7 @@ org.schemaspy.model.InvalidConfigurationException: Catalog (-cat) was not provid
         at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
 ```
 
+---
 
 Next, 
 
@@ -266,6 +269,7 @@ null
 INFO  - StackTraces have been omitted, use `-debug` when executing SchemaSpy to see them
 ```
 
+---
 
 Changing to
 ```
@@ -273,7 +277,7 @@ Changing to
 schemaspy.s=null
 ```
 
-or to (not providing this parameter at all
+or to (not providing this parameter at all)
 ```
 # db scheme for which generate diagrams
 # schemaspy.s=dbo
